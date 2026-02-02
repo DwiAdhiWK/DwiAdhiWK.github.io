@@ -669,3 +669,42 @@ h5 {
     top: 0;
   }
 }
+
+/* ───────────────────────────────────────────────
+   Custom Resume / Timeline Styles
+─────────────────────────────────────────────── */
+
+.resume-item {
+  display: flex;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 3px solid #007bff; /* ← change to match your theme color */
+}
+
+.resume-year {
+  flex: 0 0 120px;
+  font-weight: bold;
+  color: #555;
+  padding-top: 0.3rem;
+}
+
+.resume-content h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.resume-content p {
+  margin: 0;
+  color: #777;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .resume-item {
+    flex-direction: column;
+  }
+  .resume-year {
+    flex: none;
+    margin-bottom: 0.5rem;
+  }
+}
