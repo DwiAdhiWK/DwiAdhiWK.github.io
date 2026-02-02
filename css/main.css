@@ -674,37 +674,55 @@ h5 {
    Custom Resume / Timeline Styles
 ─────────────────────────────────────────────── */
 
+section#resume {
+  padding: 7rem 0;                    /* Match padding of other sections like .about, .projects */
+  background-color: var(--primary-bg-color); /* Optional: light bg like hero/projects */
+}
+
 .resume-item {
   display: flex;
-  margin-bottom: 2rem;
-  padding-left: 1rem;
-  border-left: 3px solid #007bff; /* ← change to match your theme color */
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--secondary-accent); /* Dark red accent to match theme */
+  position: relative;
 }
 
 .resume-year {
-  flex: 0 0 120px;
-  font-weight: bold;
-  color: #555;
-  padding-top: 0.3rem;
+  flex: 0 0 140px;                    /* Slightly wider for better spacing */
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--supportive-text-color);
+  padding-top: 0.4rem;
 }
 
 .resume-content h4 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.2rem;
+  margin: 0 0 0.6rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--main-text-color);
 }
 
 .resume-content p {
   margin: 0;
-  color: #777;
   font-style: italic;
+  color: var(--gray-text-color);
+  font-size: 1rem;
 }
 
+/* Mobile stacking */
 @media (max-width: 768px) {
   .resume-item {
     flex-direction: column;
+    padding-left: 0;
+    border-left: none;
+    border-top: 4px solid var(--secondary-accent); /* Alternative look on small screens */
+    padding-top: 1rem;
   }
+  
   .resume-year {
     flex: none;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
   }
 }
