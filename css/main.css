@@ -31,6 +31,34 @@ body {
   letter-spacing: -0.15px;
 }
 
+/* Extend Resume Styles – add description support */
+.resume-desc {
+  margin-top: 0.6rem;               /* Space above the description */
+  margin-bottom: 0;
+  font-size: 0.95rem;               /* Slightly smaller than institution name */
+  line-height: 1.6;
+  color: var(--gray-text-color);    /* #565a5b – matches your supportive/gray theme */
+  font-weight: 400;
+}
+
+/* Optional: make descriptions stand out more or add bullets if you prefer list format */
+.resume-desc strong {
+  color: var(--main-text-color);
+}
+
+/* If you want bullet points instead of paragraph – replace <p class="resume-desc"> with <ul class="resume-desc"> and <li> items */
+.resume-desc {
+  margin-top: 0.6rem;
+  padding-left: 1.2rem;             /* Indent for bullets */
+  list-style-type: disc;
+  color: var(--gray-text-color);
+}
+
+.resume-desc li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
 .container {
   padding: 0 32px;
   max-width: 1200px;
