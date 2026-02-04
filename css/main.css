@@ -31,6 +31,53 @@ body {
   letter-spacing: -0.15px;
 }
 
+/* Skills Icons – Essential for visibility */
+.skills-list {
+  margin-top: 2rem;
+}
+
+.skill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 2.5rem;
+  margin-bottom: 2.5rem;
+  justify-content: flex-start;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 100px;
+}
+
+.skill-item i {
+  font-size: 3.5rem;          /* Key: makes them big enough to see */
+  margin-bottom: 0.8rem;
+  line-height: 1;
+}
+
+.skill-item:hover i {
+  transform: scale(1.15);
+  transition: transform 0.3s;
+}
+
+.skill-item span {
+  font-size: 0.95rem;
+  color: var(--gray-text-color);
+}
+
+@media (max-width: 768px) {
+  .skill-group {
+    gap: 1.5rem 2rem;
+    justify-content: center;
+  }
+  .skill-item i {
+    font-size: 3rem;
+  }
+}
+
 .container {
   padding: 0 32px;
   max-width: 1200px;
