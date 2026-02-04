@@ -735,23 +735,19 @@ section#resume {
 /* Extend Resume Styles – add description support */
 .resume-desc {
   margin-top: 0.6rem;
-  margin-bottom: 0;
+  padding-left: 1.2rem;
+  list-style-type: disc;
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--gray-text-color);
-  font-weight: 400;
 }
+
 
 .resume-desc strong {
   color: var(--main-text-color);
 }
 
-.resume-desc {
-  margin-top: 0.6rem;
-  padding-left: 1.2rem;
-  list-style-type: disc;
-  color: var(--gray-text-color);
-}
+
 
 .resume-desc li {
   margin-bottom: 0.4rem;
