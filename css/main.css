@@ -31,57 +31,9 @@ body {
   letter-spacing: -0.15px;
 }
 
-/* Skills Icons – Essential for visibility */
-.skills-list {
-  margin-top: 2rem;
-}
-
-.skill-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem 2.5rem;
-  margin-bottom: 2.5rem;
-  justify-content: flex-start;
-}
-
-.skill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  min-width: 100px;
-}
-
-.skill-item i {
-  font-size: 3.5rem;          /* Key: makes them big enough to see */
-  margin-bottom: 0.8rem;
-  line-height: 1;
-}
-
-.skill-item:hover i {
-  transform: scale(1.15);
-  transition: transform 0.3s;
-}
-
-.skill-item span {
-  font-size: 0.95rem;
-  color: var(--gray-text-color);
-}
-
-@media (max-width: 768px) {
-  .skill-group {
-    gap: 1.5rem 2rem;
-    justify-content: center;
-  }
-  .skill-item i {
-    font-size: 3rem;
-  }
-}
-
 .container {
   padding: 0 32px;
   max-width: 1200px;
-  /* max-width: clamp(54.5rem, 38.125rem + 81.88vw, 120rem); */
   margin: 0 auto;
 }
 
@@ -353,13 +305,13 @@ h5 {
   display: inline-block;
   font-size: 16px;
   font-weight: 400;
-  /* text-transform: uppercase; */
   letter-spacing: 0px;
 }
 
 .skill-percent {
   float: right;
 }
+
 .skill-bar__progress {
   background-color: var(--gray-color);
   border-radius: 5px;
@@ -372,8 +324,8 @@ h5 {
 .skill-bar__fill {
   background-color: var(--secondary-accent);
   height: 4px;
-  width: 0; /* Initial width is 0 */
-  transition: width 1.5s ease-in-out; /* Smooth transition for the fill */
+  width: 0;
+  transition: width 1.5s ease-in-out;
 }
 
 .about-download-btn {
@@ -494,15 +446,6 @@ h5 {
   text-align: left;
   transition: all 0.5s ease-in-out 0s;
   opacity: 0;
-}
-
-.project-mask p {
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  font-weight: 400;
-  margin-top: 0;
-  text-align: left;
 }
 
 /* Contact */
@@ -704,105 +647,4 @@ h5 {
 }
 
 @keyframes jumping-dots {
-  0% {
-    top: 0;
-  }
-
-  40% {
-    top: -6px;
-  }
-
-  80% {
-    top: 0;
-  }
-}
-
-section#resume {
-  padding: 7rem 0;                    /* Match padding of other sections like .about, .projects */
-  background-color: var(--primary-bg-color); /* Optional: light bg like hero/projects */
-}
-
-#resume h3 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);  /* Responsive: scales with screen size */
-  font-weight: 700;
-  color: var(--secondary-accent);          /* Dark red accent for emphasis */
-  margin: 4rem 0 2rem 0;
-  padding-bottom: 0.8rem;
-  border-bottom: 2px solid var(--gray-color-2);  /* Optional underline for separation */
-}
-
-.resume-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 2.5rem;
-  padding-left: 1.5rem;
-  border-left: 4px solid var(--secondary-accent); /* Dark red accent to match theme */
-  position: relative;
-}
-
-.resume-year {
-  flex: 0 0 140px;                    /* Slightly wider for better spacing */
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--supportive-text-color);
-  padding-top: 0.4rem;
-}
-
-.resume-content h4 {
-  margin: 0 0 0.6rem 0;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--main-text-color);
-}
-
-.resume-content p {
-  margin: 0;
-  font-style: italic;
-  color: var(--gray-text-color);
-  font-size: 1rem;
-}
-
-/* Mobile stacking */
-@media (max-width: 768px) {
-  .resume-item {
-    flex-direction: column;
-    padding-left: 0;
-    border-left: none;
-    border-top: 4px solid var(--secondary-accent); /* Alternative look on small screens */
-    padding-top: 1rem;
-  }
-  
-  .resume-year {
-    flex: none;
-    margin-bottom: 0.8rem;
-    font-size: 1.05rem;
-  }
-}
-
-/* Extend Resume Styles – add description support */
-.resume-desc {
-  margin-top: 0.6rem;               /* Space above the description */
-  margin-bottom: 0;
-  font-size: 0.95rem;               /* Slightly smaller than institution name */
-  line-height: 1.6;
-  color: var(--gray-text-color);    /* #565a5b – matches your supportive/gray theme */
-  font-weight: 400;
-}
-
-/* Optional: make descriptions stand out more or add bullets if you prefer list format */
-.resume-desc strong {
-  color: var(--main-text-color);
-}
-
-/* If you want bullet points instead of paragraph – replace <p class="resume-desc"> with <ul class="resume-desc"> and <li> items */
-.resume-desc {
-  margin-top: 0.6rem;
-  padding-left: 1.2rem;             /* Indent for bullets */
-  list-style-type: disc;
-  color: var(--gray-text-color);
-}
-
-.resume-desc li {
-  margin-bottom: 0.4rem;
-  line-height: 1.5;
-}
+  0%
