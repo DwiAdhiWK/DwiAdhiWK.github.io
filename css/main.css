@@ -717,96 +717,54 @@ h5 {
   }
 }
 
-/* ───────────────────────────────────────────────
-   Custom Resume / Timeline Styles
-─────────────────────────────────────────────── */
-
-section#resume {
-  padding: 7rem 0;                    /* Match padding of other sections like .about, .projects */
-  background-color: var(--primary-bg-color); /* Optional: light bg like hero/projects */
-}
-
-#resume h3 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);  /* Responsive: scales with screen size */
-  font-weight: 700;
-  color: var(--secondary-accent);          /* Dark red accent for emphasis */
-  margin: 4rem 0 2rem 0;
-  padding-bottom: 0.8rem;
-  border-bottom: 2px solid var(--gray-color-2);  /* Optional underline for separation */
-}
-
-.resume-item {
+/* Compact Skills Grid – fits resume style */
+.resume-content .skills-grid {
+  margin-top: 1rem;
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 2.5rem;
-  padding-left: 1.5rem;
-  border-left: 4px solid var(--secondary-accent); /* Dark red accent to match theme */
-  position: relative;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;  /* space between icons */
+  justify-content: flex-start;  /* or center if you prefer */
 }
 
-.resume-year {
-  flex: 0 0 140px;                    /* Slightly wider for better spacing */
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--supportive-text-color);
-  padding-top: 0.4rem;
+.resume-content .skill-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 80px;
+  max-width: 110px;
+  margin-bottom: 1rem;
 }
 
-.resume-content h4 {
-  margin: 0 0 0.6rem 0;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--main-text-color);
+.resume-content .skill-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
 }
 
-.resume-content p {
-  margin: 0;
-  font-style: italic;
+.resume-content .skill-box:hover .skill-icon {
+  transform: scale(1.15);
+}
+
+.resume-content .skill-box span {
+  font-size: 0.9rem;
   color: var(--gray-text-color);
-  font-size: 1rem;
-}
-
-/* Mobile stacking */
-@media (max-width: 768px) {
-  .resume-item {
-    flex-direction: column;
-    padding-left: 0;
-    border-left: none;
-    border-top: 4px solid var(--secondary-accent); /* Alternative look on small screens */
-    padding-top: 1rem;
-  }
-  
-  .resume-year {
-    flex: none;
-    margin-bottom: 0.8rem;
-    font-size: 1.05rem;
-  }
-}
-
-/* Extend Resume Styles – add description support */
-.resume-desc {
-  margin-top: 0.6rem;               /* Space above the description */
-  margin-bottom: 0;
-  font-size: 0.95rem;               /* Slightly smaller than institution name */
-  line-height: 1.6;
-  color: var(--gray-text-color);    /* #565a5b – matches your supportive/gray theme */
   font-weight: 400;
 }
 
-/* Optional: make descriptions stand out more or add bullets if you prefer list format */
-.resume-desc strong {
-  color: var(--main-text-color);
-}
-
-/* If you want bullet points instead of paragraph – replace <p class="resume-desc"> with <ul class="resume-desc"> and <li> items */
-.resume-desc {
-  margin-top: 0.6rem;
-  padding-left: 1.2rem;             /* Indent for bullets */
-  list-style-type: disc;
-  color: var(--gray-text-color);
-}
-
-.resume-desc li {
-  margin-bottom: 0.4rem;
-  line-height: 1.5;
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .resume-content .skills-grid {
+    justify-content: center;
+    gap: 1.2rem 1.8rem;
+  }
+  .resume-content .skill-icon {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+  .resume-content .skill-box {
+    min-width: 90px;
+  }
 }
