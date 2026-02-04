@@ -649,8 +649,8 @@ h5 {
 @keyframes jumping-dots {
   0%
 
-  /* ───────────────────────────────────────────────
-   Custom Resume / Timeline Styles
+/* ───────────────────────────────────────────────
+   Custom Resume / Timeline Styles (original from yesterday)
 ─────────────────────────────────────────────── */
 
 section#resume {
@@ -740,3 +740,6 @@ section#resume {
   margin-bottom: 0.4rem;
   line-height: 1.5;
 }
+
+
+
