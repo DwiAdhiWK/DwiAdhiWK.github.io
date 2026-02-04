@@ -717,13 +717,92 @@ h5 {
   }
 }
 
-/* Compact Skills Grid – fits resume style */
+/* ───────────────────────────────────────────────
+   Custom Resume / Timeline Styles (keep this intact)
+─────────────────────────────────────────────── */
+
+section#resume {
+  padding: 7rem 0;
+  background-color: var(--primary-bg-color);
+}
+
+#resume h3 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--secondary-accent);
+  margin: 4rem 0 2rem 0;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid var(--gray-color-2);
+}
+
+.resume-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--secondary-accent);
+  position: relative;
+}
+
+.resume-year {
+  flex: 0 0 140px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--supportive-text-color);
+  padding-top: 0.4rem;
+}
+
+.resume-content h4 {
+  margin: 0 0 0.6rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--main-text-color);
+}
+
+.resume-content p {
+  margin: 0;
+  font-style: italic;
+  color: var(--gray-text-color);
+  font-size: 1rem;
+}
+
+/* Mobile stacking for timeline entries */
+@media (max-width: 768px) {
+  .resume-item {
+    flex-direction: column;
+    padding-left: 0;
+    border-left: none;
+    border-top: 4px solid var(--secondary-accent);
+    padding-top: 1rem;
+  }
+  
+  .resume-year {
+    flex: none;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* Description support (if you use it) */
+.resume-desc {
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--gray-text-color);
+  font-weight: 400;
+}
+
+/* ───────────────────────────────────────────────
+   Compact Skills Grid – ONLY for Skills section
+─────────────────────────────────────────────── */
+
 .resume-content .skills-grid {
   margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem 2rem;  /* space between icons */
-  justify-content: flex-start;  /* or center if you prefer */
+  gap: 1.5rem 2rem;
+  justify-content: flex-start;  /* left-aligned like resume content */
 }
 
 .resume-content .skill-box {
