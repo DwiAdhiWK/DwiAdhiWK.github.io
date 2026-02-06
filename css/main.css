@@ -232,16 +232,36 @@ h5 {
   font-weight: 400;
 }
 
-.hero-img {
+/* .hero-img {
   display: flex;
   flex: 1 1 356px;
   justify-content: flex-end;
   margin-top: auto;
+} */
+
+/* new hero-img */
+
+.hero-img {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
 }
 
-.hero-img img {
+/* .hero-img img {
   display: block;
   position: relative;
+} */
+
+/* new hero-img img */
+
+.hero-img img {
+  width: 280px;          /* desktop size */
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;    /* 🔥 circular crop */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .about-social-list {
@@ -747,6 +767,23 @@ section#resume {
 
 /* Mobile stacking */
 @media (max-width: 768px) {
+
+  /*Profile Picture*/
+  .hero-row {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-img {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .hero-img img {
+    width: 200px;
+    height: 200px;
+  }
+  
   .resume-item {
     flex-direction: column;
     padding-left: 0;
